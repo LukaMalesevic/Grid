@@ -1,0 +1,352 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url(Roboto-Regular.ttf);
+}
+
+html{
+    font-size: 62.5%;
+    height: 100%;
+}
+
+body{
+    margin: auto;
+    font-family: 'Roboto';
+    height: 100%;
+    display: flex;
+
+}
+
+.dashboard{
+    width: 20%;
+    height: 100%;
+    background-color: #1992D4;
+    color: white;
+    display: grid;
+    grid-template: repeat(12, 50px)/ 2fr 5fr;
+    align-items: center;
+    gap: 10px;
+}
+
+.userContainer{
+    width: 80%;
+    height: 100%;
+}
+
+.userMain > svg {
+    width: 15px;
+    filter: contrast(1);
+}
+
+#search{
+    grid-area: search;
+    width: 40px;
+    justify-self: center;
+} 
+#bell{
+    grid-area: bell;
+    width: 40px;
+    justify-self: right;
+}
+#pfp{
+    grid-area: pfp;
+    width: 60px;
+    justify-self: center;
+}
+
+#pfp-large{
+    grid-area: pfp-large;
+    width: 100px;
+    justify-self: right;
+    margin-right: 10px;
+}
+h3{
+    grid-area: h3;
+    font-size: 2rem;
+    margin-block-end: 5px;
+    justify-self: center;
+    margin-block-start: 5px;
+    margin-right: 35%;
+}
+
+.hi-there > h2{
+    margin-block-start: 0;
+}
+
+.search-bar
+{
+    grid-area: searchbar;
+    background-color: #E2E8F0;
+    border-radius: 15px;
+    height: 50%;
+}
+
+.hi-there{
+    grid-area: hi-there;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.buttonsContainer{
+    grid-area: buttons;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.new-btn{
+    grid-area: new-btn;
+}
+
+.upload-btn{
+    grid-area: upload-btn;
+}
+
+.share-btn{
+    grid-area: share-btn;
+
+} 
+.btns{
+    height: 40%;
+    border-radius: 20px;
+    border: none;
+    background-color: #1992D4;
+    color: white;
+    font-size: 1.75rem;
+    font-weight: bold;
+    width: 20%;
+}
+
+
+.userMain{
+    display: grid;
+    position: relative;
+    width: 100%;
+    height: 20%;
+    background-color: white;
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.2);
+    align-items: center;
+    grid-template: 4fr 5fr / repeat(14, 1fr);
+    grid-template-areas: ". search searchbar searchbar searchbar searchbar searchbar searchbar searchbar . bell pfp h3 h3"
+    ". pfp-large pfp-large hi-there hi-there hi-there hi-there hi-there buttons buttons buttons buttons buttons buttons";
+} 
+
+.userAssigments{
+    width: 100%;
+    height: 80%;
+    background-color: #E2E8F0;
+    display: flex;
+}
+.projects > h2{
+    grid-area: h2;
+    margin-block-end: 5px;
+}
+.line{
+    height: 100%;
+    width: 2%;
+    background-color: #F0B429;
+    border-radius: 10px;
+}
+.proj-content{
+    width: 98%;
+    height: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+.proj-txt{
+    width: 100%;
+    height: 70%;
+    margin-left: 3%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.proj-txt > p{
+    font-size: 1.5rem;
+    color: #888888;
+    margin-block: 5px;
+    width: 97%;
+}
+.projectBlock{
+    background-color: blanchedalmond;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: flex;
+    box-shadow: 3px 5px 2px -1px rgba(0,0,0,0.24);
+}
+.icons{
+    width: 93%;
+    height: 30%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+}
+
+.icons > svg{
+    width: 30px;
+    margin-left: 10%;
+}
+.projectBlock:nth-child(2)
+{
+    grid-area: pr1;
+}
+.projectBlock:nth-child(3)
+{
+    grid-area: pr2;
+}
+.projectBlock:nth-child(4)
+{
+    grid-area: pr3;
+}
+.projectBlock:nth-child(5)
+{
+    grid-area: pr4;
+}
+.projectBlock:nth-child(6)
+{
+    grid-area: pr5;
+}
+.projectBlock:nth-child(7)
+{
+    grid-area: pr6;
+}
+.projects{
+    width: 70%;
+    height: 100%;
+    gap: 3%;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: grid;
+    grid-template: 1fr repeat(3, 3fr) 1fr/ 1fr 1fr;
+    grid-template-areas: 
+    "h2 . "
+    "pr1 pr2"
+    "pr3 pr4"
+    "pr5 pr6"
+    ". .";
+}
+
+.dashboard > svg{
+    filter: brightness(0) invert(1);
+    min-width: 40px;
+
+}
+.dashboard > #dash-board, .dashboard > h1{
+    grid-row-start: 1;
+    grid-row-end: 3;
+}
+
+.others{
+    width: 30%;
+    height: 100%;
+}
+
+.ann, .trend{
+    width: 100%;
+    height: 40%;
+}
+.ann > h2, .trend> h2{
+    margin-block-end: 5px;
+}
+.ann-content, .trend-content{
+    width: 82%;
+    height: 75%;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 3px 5px 2px -1px rgba(0,0,0,0.24);
+    padding: 6%;
+    padding-top: none;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ann-block > h3 {
+    font-size: 1.75rem;
+    margin-block: 2px;
+}
+
+.ann-block > p {
+    margin-block: 5px;
+    color: #696969;
+    font-size: 1.25rem;
+    width: 100%;
+
+}
+hr{
+    color: #696969;
+    size: 1px;
+    width: 100%;
+    float: left;
+}
+.profile{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    margin-bottom: 5%;
+    align-items: center;
+}
+.profile-name{
+    margin-left: 10%;
+    width: 100%;
+}
+.profile-name > h3{
+    font-size: 1.5rem;
+    margin-block-start: 0px;
+}
+#pfp-svg{
+    width: 60px;
+}
+
+h1{
+    font-size: 3rem;
+}
+
+h2{
+    font-size: 2.5rem;
+}
+
+@media (width <= 1200px)
+{
+    h1{
+        font-size: 1.75rem;
+    }
+
+    h2{
+        font-size: 1.25rem;
+    }
+}
+
+@media (width <= 700px)
+{
+    h1{
+        font-size: 1.75rem;
+    }
+
+    h2{
+        font-size: 1.25rem;
+    }
+
+    .dashboard{
+        grid-template: repeat(11, 50px)/ 10px 5fr;
+
+    }
+    svg{
+        visibility: hidden;
+    }
+}
+
+@media (width <= 500px)
+{
+    h1{
+        font-size: 1.25rem;
+    }
+
+    h2{
+        font-size: 1rem;
+    }
+}
